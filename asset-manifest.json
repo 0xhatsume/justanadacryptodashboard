@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/thecrypt/static/css/main.073c9b0a.css",
+    "main.js": "/thecrypt/static/js/main.9adf02c0.js",
+    "static/js/787.4a08487a.chunk.js": "/thecrypt/static/js/787.4a08487a.chunk.js",
+    "static/media/logo.svg": "/thecrypt/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/thecrypt/index.html",
+    "main.073c9b0a.css.map": "/thecrypt/static/css/main.073c9b0a.css.map",
+    "main.9adf02c0.js.map": "/thecrypt/static/js/main.9adf02c0.js.map",
+    "787.4a08487a.chunk.js.map": "/thecrypt/static/js/787.4a08487a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.9adf02c0.js"
+  ]
+}
