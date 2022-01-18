@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Provider } from 'react-redux';
 import { createHashHistory } from 'history';
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
@@ -11,6 +11,8 @@ import authProvider from '../components/admin/authProvider';
 import Home from './Home';
 import LoginPage from './Login/loginPage';
 
+import GsSyncer from '../state/gs/updater';
+
 //import CryptoEntities, {CryptoECreate, CryptoEEdit} from '../components/admin/cryptoentities';
 // const dataProvider = googleSheetsDataProvider("1ZoxqPw-JVqWes54FHlTCiXN7sHebiu_2_cdMgzh2lqg");
 // const authProvider = googleAPIAuthProvider();
@@ -18,7 +20,15 @@ import LoginPage from './Login/loginPage';
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 const history = createHashHistory();
 
+function Updaters(){
+  return (
+    <>
+      <GsSyncer/>
+    </>
+  )
+}
 function App() {
+
   return (
     <Provider store={initStore({
         authProvider,
@@ -27,6 +37,7 @@ function App() {
       })}>
 
         <Router basename={process.env.PUBLIC_URL}>
+          <Updaters/>
           <Switch>
 
             <Route exact path="/">
