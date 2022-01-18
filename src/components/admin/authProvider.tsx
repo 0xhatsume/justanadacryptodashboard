@@ -1,6 +1,8 @@
+import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'react-admin';
+
 const authProvider = {
     // called when the user attempts to log in
-    login: ({ username }) => {
+    login: ({ username }: any) => {
         localStorage.setItem('username', username);
         // accept all username/password combinations
         return Promise.resolve();
@@ -11,7 +13,7 @@ const authProvider = {
         return Promise.resolve();
     },
     // called when the API returns an error
-    checkError: ({ status }) => {
+    checkError: ({ status }: any) => {
         if (status === 401 || status === 403) {
             localStorage.removeItem('username');
             return Promise.reject();
