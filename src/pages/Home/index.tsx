@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { useGetShortList } from '../../state/gs/hooks';
 import HorizontalPriceSection from '../../components/sections';
 
+import PriceTable from '../../components/pricetables';
+
 const Home: React.FC = () => {
 
     const shortlist = useGetShortList();
@@ -11,7 +13,7 @@ const Home: React.FC = () => {
     return (
         <>
             <HorizontalPriceSection title="CEX">
-                    hellos homies
+                    <PriceTable />
                 </HorizontalPriceSection>
             
             <HorizontalPriceSection title="DEX">
