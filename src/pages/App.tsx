@@ -8,6 +8,7 @@ import initStore from '../state';
 import jsonServerProvider from 'ra-data-json-server';
 import authProvider from '../components/admin/authProvider';
 
+import MiniDrawer from '../components/sidebar';
 import Home from './Home';
 import LoginPage from './Login/loginPage';
 
@@ -40,9 +41,11 @@ function App() {
           <Updaters/>
           <Switch>
 
-            <Route exact path="/">
-              <Home />
-            </Route>
+            <MiniDrawer>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            </MiniDrawer>
 
             <Route path="/admin">
               <Admin 
